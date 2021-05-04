@@ -1,0 +1,4561 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "HDP App OpenApi API Documentation",
+        "description": "HDP App Using L5 Swagger OpenApi description",
+        "contact": {
+            "email": "hdp@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/v1/faqs": {
+            "get": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "Show all faqs ",
+                "description": "Show all faqs ",
+                "operationId": "allNews",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/faqs/{id}": {
+            "get": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "show a faqs ",
+                "description": "show a faqs ",
+                "operationId": "showNews",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Faq ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/news": {
+            "get": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "Show all news ",
+                "description": "Show all news ",
+                "operationId": "allNews",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/news/{id}": {
+            "get": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "show a news ",
+                "description": "show a news ",
+                "operationId": "showNews",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "News ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/customer/consultations": {
+            "get": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "Show all consultations of a customer",
+                "description": "Show all consultations of a customer",
+                "operationId": "allFacilities",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/customer/consultation/{id}": {
+            "get": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "show a customer's consultation details ",
+                "description": "show a customer's consultation details ",
+                "operationId": "showCustomerconsultation",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Consultation ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/customer/customer-profile": {
+            "post": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "Profile of a customer",
+                "description": "Profile of a customer",
+                "operationId": "updateCustomerProfile",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CustomerUpdateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/customer/customer-depandants": {
+            "get": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "Show all facilities ",
+                "description": "Show all facilities ",
+                "operationId": "allFacilities",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "create a customer's dependant ",
+                "description": "create a customer's dependant ",
+                "operationId": "createCustomerDependant",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CustomerDependantCreateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/customer/customer-depandants/{id}": {
+            "get": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "show a customer's dependant ",
+                "description": "show a customer's dependant ",
+                "operationId": "showCustomerDependant",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "update a customer's dependant ",
+                "description": "update a customer's dependant ",
+                "operationId": "updateCustomerDependant",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CustomerDependantUpdateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "delete a customer's dependant ",
+                "description": "delete a customer's dependant ",
+                "operationId": "deleteCustomerDependant",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/customer/customer-invoices": {
+            "post": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "Show all invoices ",
+                "description": "Show all invoices ",
+                "operationId": "allInvoices",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/customer/customer-invoices/{id}": {
+            "post": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "Show invoice details ",
+                "description": "Show invoice details ",
+                "operationId": "showInvoiceDetails",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Invoice ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/customer/{id}/review/": {
+            "get": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "show a customer's review details ",
+                "description": "show a customer's review details ",
+                "operationId": "showCustomerReview",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Review ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/customer/customer-service-requests": {
+            "post": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "Show all Service Requests ",
+                "description": "Show all Service Requests ",
+                "operationId": "allServiceRequests",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/customer/customer-service-requests/{id}": {
+            "get": {
+                "tags": [
+                    "customer"
+                ],
+                "summary": "show a Service requests to customer ",
+                "description": "show a Service requests to customer ",
+                "operationId": "showCustomerDependant",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Service Request ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/facility/facility-profile": {
+            "post": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "Profile of a facility",
+                "description": "Profile of a facility",
+                "operationId": "updateFacilityProfile",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FacilityProfileUpdateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/facility/facility-location": {
+            "post": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "create a facility's location ",
+                "description": "create a facility's location ",
+                "operationId": "createFacilityLocation",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FacilityLocationCreateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/facility/facility-location/{id}": {
+            "get": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "show a facility's location ",
+                "description": "show a facility's location ",
+                "operationId": "showFacilityLocation",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "update a facility's location ",
+                "description": "update a facility's location ",
+                "operationId": "updateFacilityLocation",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/facility/facility-product-offerings": {
+            "post": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "create a facility product offering ",
+                "description": "create a facility product offering ",
+                "operationId": "createFacilityProductOffering",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FacilityProductOfferingCreateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/facility/facility-product-offerings/{id}": {
+            "get": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "show a facility's dependant ",
+                "description": "show a facility's dependant ",
+                "operationId": "showFacilityProductOffering",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "update a facility's dependant ",
+                "description": "update a facility's dependant ",
+                "operationId": "updateFacilityProductOffering",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "delete a facility's dependant ",
+                "description": "delete a facility's dependant ",
+                "operationId": "deleteFacilityProductOffering",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/facility/facility-professionals": {
+            "post": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "create a facility professional ",
+                "description": "create a facility professional ",
+                "operationId": "createFacilityProfessional",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FacilityProfessionalCreateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/facility/facility-professionals/{id}": {
+            "get": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "show a facility's dependant ",
+                "description": "show a facility's dependant ",
+                "operationId": "showFacilityProfessional",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "update a facility's dependant ",
+                "description": "update a facility's dependant ",
+                "operationId": "updateFacilityProfessional",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "delete a facility's dependant ",
+                "description": "delete a facility's dependant ",
+                "operationId": "deleteFacilityProfessional",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/facility/facility-service-availability": {
+            "post": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "create a facility service availability ",
+                "description": "create a facility service availability ",
+                "operationId": "createFacilityServiceAvailability",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FacilityServiceAvailabilityCreateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/facility/facility-service-availability/{id}": {
+            "get": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "show a facility's dependant ",
+                "description": "show a facility's dependant ",
+                "operationId": "showFacilityServiceAvailability",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "update a facility's dependant ",
+                "description": "update a facility's dependant ",
+                "operationId": "updateFacilityServiceAvailability",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "delete a facility's dependant ",
+                "description": "delete a facility's dependant ",
+                "operationId": "deleteFacilityServiceAvailability",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/facility/facility-service-offerings": {
+            "post": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "create a facility service offering ",
+                "description": "create a facility service offering ",
+                "operationId": "createFacilityServiceOffering",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FacilityServiceOfferingCreateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/facility/facility-service-offerings/{id}": {
+            "get": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "show a facility's service offering ",
+                "description": "show a facility's service offering ",
+                "operationId": "showFacilityServiceOffering",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "update a facility's service offering ",
+                "description": "update a facility's service offering ",
+                "operationId": "updateFacilityServiceOffering",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "delete a facility's service offering ",
+                "description": "delete a facility's service offering ",
+                "operationId": "deleteFacilityServiceOffering",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/facility/facility-user": {
+            "post": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "create a facility product offering ",
+                "description": "create a facility product offering ",
+                "operationId": "createFacilityUser",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FacilityUserCreateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/facility/facility-user/{id}": {
+            "get": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "show a facility's dependant ",
+                "description": "show a facility's dependant ",
+                "operationId": "showFacilityUser",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "update a facility's dependant ",
+                "description": "update a facility's dependant ",
+                "operationId": "updateFacilityUser",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "facility"
+                ],
+                "summary": "delete a facility's dependant ",
+                "description": "delete a facility's dependant ",
+                "operationId": "deleteFacilityUser",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-accreditations": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show all accreditations ",
+                "description": "Show all accreditations ",
+                "operationId": "allAccreditations",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-accreditations/{id}": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show facility details ",
+                "description": "Show facility details ",
+                "operationId": "showAccreditationsDetails",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Facility ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-facilities": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show all facilities ",
+                "description": "Show all facilities ",
+                "operationId": "allFacilities",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-facilities/{id}": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show facility details ",
+                "description": "Show facility details ",
+                "operationId": "showFacilityDetails",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Facility ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-offerings": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show all offerings ",
+                "description": "Show all offerings ",
+                "operationId": "allOfferings",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-offerings/{id}": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show facility details ",
+                "description": "Show facility details ",
+                "operationId": "showOfferingsDetails",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Facility ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-offering-in-category": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show all offering-in-category ",
+                "description": "Show all offering-in-category ",
+                "operationId": "allOfferingsInCategories",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-offering-in-category/{id}": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show facility details ",
+                "description": "Show facility details ",
+                "operationId": "showOfferingsInCategoriesDetails",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Facility ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-product-offerings": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show all product-offerings ",
+                "description": "Show all product-offerings ",
+                "operationId": "allProductOfferings",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-product-offerings/{id}": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show facility details ",
+                "description": "Show facility details ",
+                "operationId": "showProductOfferingsDetails",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Facility ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-professionals": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show all professionals ",
+                "description": "Show all professionals ",
+                "operationId": "allProfessionals",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-professionals/{id}": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show facility details ",
+                "description": "Show facility details ",
+                "operationId": "showProfessionalDetails",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Facility ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-service-offerings": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show all service-offerings ",
+                "description": "Show all service-offerings ",
+                "operationId": "allServiceOfferings",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/general/general-service-offerings/{id}": {
+            "get": {
+                "tags": [
+                    "general"
+                ],
+                "summary": "Show facility details ",
+                "description": "Show facility details ",
+                "operationId": "showServiceOfferingDetails",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Facility ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/professional/{id}/appointment/": {
+            "get": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "show a professional's appointment details ",
+                "description": "show a professional's appointment details ",
+                "operationId": "showProfessionalAppointments",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Review ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/professional/consultations": {
+            "get": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "Show all consultations of a professional",
+                "description": "Show all consultations of a professional",
+                "operationId": "App\\Http\\Controllers\\Api\\Professional\\ConsultationController::index",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/professional/consultation/{id}": {
+            "get": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "show a professional's consultation details ",
+                "description": "show a professional's consultation details ",
+                "operationId": "showProfessionalconsultation",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Consultation ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/professional/professional-profile": {
+            "post": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "Profile of a professional",
+                "description": "Profile of a professional",
+                "operationId": "updateProfessionalProfile",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProfessionalUpdateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/professional/professional-service-availability": {
+            "get": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "Show all service availabilities of a professional",
+                "description": "Show all service availabilities of a professional",
+                "operationId": "allFacilities",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "create a professional's dependant ",
+                "description": "create a professional's dependant ",
+                "operationId": "createProfessionalServiceAvailability",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProfessionalServiceAvailabilityCreateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/professional/professional-service-availability/{id}": {
+            "get": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "show a professional's service availability ",
+                "description": "show a professional's service availability ",
+                "operationId": "showProfessionalServiceAvailability",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "update a professional's dependant ",
+                "description": "update a professional's dependant ",
+                "operationId": "updateProfessionalServiceAvailability",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "delete a professional's dependant ",
+                "description": "delete a professional's dependant ",
+                "operationId": "deleteProfessionalServiceAvailability",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/professional/professional-service-offerings": {
+            "get": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "Show all service offerings of a professional",
+                "description": "Show all service offerings of a professional",
+                "operationId": "allFacilities",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "create a service offerings ",
+                "description": "create a service offerings ",
+                "operationId": "createProfessionalServiceOffering",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProfessionalServiceOfferingCreateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/professional/professional-service-offerings/{id}": {
+            "get": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "show a professional's service offerings ",
+                "description": "show a professional's service offerings ",
+                "operationId": "showProfessionalServiceOffering",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "update a professional's offering ",
+                "description": "update a professional's offering ",
+                "operationId": "updateProfessionalServiceOffering",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProfessionalServiceOfferingCreateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "delete a professional's offering ",
+                "description": "delete a professional's offering ",
+                "operationId": "deleteProfessionalServiceOffering",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Dependant ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/professional/{id}/review/": {
+            "get": {
+                "tags": [
+                    "professional"
+                ],
+                "summary": "show a professional's review details ",
+                "description": "show a professional's review details ",
+                "operationId": "showProfessionalReview",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Review ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/user/register": {
+            "post": {
+                "tags": [
+                    "authentication"
+                ],
+                "summary": "Sign Up a new user",
+                "description": "Returns a newly registered user data",
+                "operationId": "signUp",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserRegistrationFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signup",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "/api/v1/user/login": {
+            "post": {
+                "tags": [
+                    "authentication"
+                ],
+                "summary": "Sign In a registered user",
+                "description": "Returns a newly registered user data",
+                "operationId": "signIn",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserLoginFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "/api/v1/user/profile": {
+            "get": {
+                "tags": [
+                    "authentication"
+                ],
+                "summary": "Profile of a registered user",
+                "description": "Profile of a registered user",
+                "operationId": "userProfile",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "authentication"
+                ],
+                "summary": "Profile of a registered user",
+                "description": "Profile of a registered user",
+                "operationId": "updateUserProfile",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserUpdateFormRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/user/logout": {
+            "post": {
+                "tags": [
+                    "authentication"
+                ],
+                "summary": "Logout a registered user",
+                "description": "Logout a registered user",
+                "operationId": "userLogout",
+                "responses": {
+                    "200": {
+                        "description": "Successful signin",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "CustomerDependantCreateFormRequest": {
+                "title": "Customer Dependant Create Form Request Fields",
+                "description": "Customer Dependant Create request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "dependant_name": {
+                        "title": " Offer Name",
+                        "description": " Offer Name",
+                        "type": "string",
+                        "example": "name"
+                    },
+                    "telephone": {
+                        "title": "Telephone",
+                        "description": "Telephone",
+                        "type": "string",
+                        "example": "070384444444"
+                    },
+                    "birth_date": {
+                        "title": "Birth Date",
+                        "description": "Birth Date",
+                        "type": "string",
+                        "example": "28-04-1991"
+                    }
+                },
+                "type": "object"
+            },
+            "CustomerDependantUpdateFormRequest": {
+                "title": "Customer Dependant Update Form Request Fields",
+                "description": "Customer Dependant Update request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "dependant_name": {
+                        "title": " Offer Name",
+                        "description": " Offer Name",
+                        "type": "string",
+                        "example": "name"
+                    },
+                    "telephone": {
+                        "title": "Telephone",
+                        "description": "Telephone",
+                        "type": "string",
+                        "example": "070384444444"
+                    },
+                    "birth_date": {
+                        "title": "Birth Date",
+                        "description": "Birth Date",
+                        "type": "string",
+                        "example": "28-04-1991"
+                    }
+                },
+                "type": "object"
+            },
+            "CustomerExpenditureCreateFormRequest": {
+                "title": "Customer Expenditure Create Form Request Fields",
+                "description": "Customer Expenditure Create request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "invoice_id": {
+                        "title": "Invoice Id",
+                        "description": "Invoice Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "customer_id": {
+                        "title": "Service Offering Id",
+                        "description": "Service Offering Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "description": {
+                        "title": "Description",
+                        "description": "Description",
+                        "type": "integer",
+                        "example": "Description"
+                    },
+                    "expense_amount": {
+                        "title": "Expense Amount",
+                        "description": "Expense Amount",
+                        "type": "integer",
+                        "example": "1000"
+                    }
+                },
+                "type": "object"
+            },
+            "CustomerExpenditureUpdateFormRequest": {
+                "title": "Customer Expenditure Update Form Request Fields",
+                "description": "Customer Expenditure Update request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "invoice_id": {
+                        "title": "Professional Id",
+                        "description": "Professional Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "customer_id": {
+                        "title": "Service Offering Id",
+                        "description": "Service Offering Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "description": {
+                        "title": "Description",
+                        "description": "Description",
+                        "type": "integer",
+                        "example": "Description"
+                    },
+                    "expense_amount": {
+                        "title": "Expense Amount",
+                        "description": "Expense Amount",
+                        "type": "integer",
+                        "example": "1000"
+                    }
+                },
+                "type": "object"
+            },
+            "CustomerUpdateFormRequest": {
+                "title": "Customer Create Form Request Fields",
+                "description": "Customer Create request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "email": {
+                        "title": "Customer public code",
+                        "description": "public code of the customer",
+                        "type": "string",
+                        "example": "3333"
+                    },
+                    "date_of_birth": {
+                        "title": "DOB of customer",
+                        "description": "DOB  of the customer",
+                        "type": "string",
+                        "example": "2020-06-03"
+                    }
+                },
+                "type": "object"
+            },
+            "FacilityLocationCreateFormRequest": {
+                "title": "Facility Location create Form Request Fields",
+                "description": "Facility Location create request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "facility_id": {
+                        "title": "Facility Id",
+                        "description": "Facility Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "location_name": {
+                        "title": "Facility First Name",
+                        "description": "First name of the facility",
+                        "type": "string",
+                        "example": "Schneider"
+                    },
+                    "location_address_house_number": {
+                        "title": "Facility Location Address",
+                        "description": "Location Address of the facility",
+                        "type": "string",
+                        "example": "No 2 Jesus Street near schneider's office"
+                    },
+                    "location_address_street_name": {
+                        "title": "Facility Location Street Address",
+                        "description": "Location Street Address of the facility",
+                        "type": "string",
+                        "example": "No 2 Jesus Street near schneider's office"
+                    },
+                    "location_address_suburb": {
+                        "title": "Facility Location Address Surburb",
+                        "description": "Location Address Surburb of the facility",
+                        "type": "string",
+                        "example": "No 2 Jesus Street near schneider's office"
+                    },
+                    "location_address_city": {
+                        "title": "Facility Location City",
+                        "description": "Location City of the facility",
+                        "type": "string",
+                        "example": "Abuja"
+                    },
+                    "location_address_state": {
+                        "title": "Facility Location State",
+                        "description": "Location State of the facility",
+                        "type": "string",
+                        "example": "Abuja"
+                    },
+                    "gps_location_name": {
+                        "title": "Facility Location Name",
+                        "description": "Location Name of the facility",
+                        "type": "string",
+                        "example": "Abuja"
+                    },
+                    "gps_long": {
+                        "title": "Facility GPS Long",
+                        "description": "GPS Long of the facility",
+                        "type": "string",
+                        "example": "6.444"
+                    },
+                    "gps_lat": {
+                        "title": "Facility GPS Lat",
+                        "description": "GPS Lat of the facility",
+                        "type": "string",
+                        "example": "9.0333"
+                    },
+                    "gps_city": {
+                        "title": "Facility GPS City",
+                        "description": "GPS City of the facility",
+                        "type": "string",
+                        "example": "Abuja"
+                    },
+                    "gps_state": {
+                        "title": "Facility GPS State",
+                        "description": "GPS State of the facility",
+                        "type": "string",
+                        "example": "FCT"
+                    }
+                },
+                "type": "object"
+            },
+            "FacilityLocationUpdateFormRequest": {
+                "title": "Facility Location update Form Request Fields",
+                "description": "Facility Location update request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "facility_id": {
+                        "title": "Facility Id",
+                        "description": "Facility Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "location_name": {
+                        "title": "Facility First Name",
+                        "description": "First name of the facility",
+                        "type": "string",
+                        "example": "Schneider"
+                    },
+                    "location_address_house_number": {
+                        "title": "Facility Location Address",
+                        "description": "Location Address of the facility",
+                        "type": "string",
+                        "example": "No 2 Jesus Street near schneider's office"
+                    },
+                    "location_address_street_name": {
+                        "title": "Facility Location Street Address",
+                        "description": "Location Street Address of the facility",
+                        "type": "string",
+                        "example": "No 2 Jesus Street near schneider's office"
+                    },
+                    "location_address_suburb": {
+                        "title": "Facility Location Address Surburb",
+                        "description": "Location Address Surburb of the facility",
+                        "type": "string",
+                        "example": "No 2 Jesus Street near schneider's office"
+                    },
+                    "location_address_city": {
+                        "title": "Facility Location City",
+                        "description": "Location City of the facility",
+                        "type": "string",
+                        "example": "Abuja"
+                    },
+                    "location_address_state": {
+                        "title": "Facility Location State",
+                        "description": "Location State of the facility",
+                        "type": "string",
+                        "example": "Abuja"
+                    },
+                    "gps_location_name": {
+                        "title": "Facility Location Name",
+                        "description": "Location Name of the facility",
+                        "type": "string",
+                        "example": "Abuja"
+                    },
+                    "gps_long": {
+                        "title": "Facility GPS Long",
+                        "description": "GPS Long of the facility",
+                        "type": "string",
+                        "example": "6.444"
+                    },
+                    "gps_lat": {
+                        "title": "Facility GPS Lat",
+                        "description": "GPS Lat of the facility",
+                        "type": "string",
+                        "example": "9.0333"
+                    },
+                    "gps_city": {
+                        "title": "Facility GPS City",
+                        "description": "GPS City of the facility",
+                        "type": "string",
+                        "example": "Abuja"
+                    },
+                    "gps_state": {
+                        "title": "Facility GPS State",
+                        "description": "GPS State of the facility",
+                        "type": "string",
+                        "example": "FCT"
+                    }
+                },
+                "type": "object"
+            },
+            "FacilityProductOfferingCreateFormRequest": {
+                "title": "Facility Product Offering create Form Request Fields",
+                "description": "Facility Product Offering create request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "product_name": {
+                        "title": "Product Name",
+                        "description": "Product Name",
+                        "type": "string",
+                        "example": "Product Name"
+                    },
+                    "brand_name": {
+                        "title": "Brand Name",
+                        "description": "Brand Name",
+                        "type": "string",
+                        "example": "Brand Name"
+                    },
+                    "manufacturer": {
+                        "title": "Manufacturer",
+                        "description": "Manufacturer",
+                        "type": "string",
+                        "example": "Manufacturer"
+                    },
+                    "upc_code": {
+                        "title": "UPC Code",
+                        "description": "UPC Code",
+                        "type": "string",
+                        "example": "UPC Code"
+                    },
+                    "qty_available": {
+                        "title": "Quantity of product available",
+                        "description": "Quantity of product available",
+                        "type": "integer",
+                        "example": "Quantity of product available"
+                    },
+                    "product_availability_date": {
+                        "title": "Product Availability date",
+                        "description": "Product Availability date",
+                        "type": "string",
+                        "example": "Product Availability date"
+                    },
+                    "description": {
+                        "title": "Description",
+                        "description": "Description",
+                        "type": "string",
+                        "example": "Description"
+                    },
+                    "unit_of_measure": {
+                        "title": "Unit of measure",
+                        "description": "Unit of measure",
+                        "type": "string",
+                        "example": "Unit of measure"
+                    },
+                    "is_drug": {
+                        "title": "Is the product a drug",
+                        "description": "Is the product a drug",
+                        "type": "string",
+                        "example": "true/false"
+                    },
+                    "has_sale_restrictions": {
+                        "title": "Does product have a sale restriction",
+                        "description": "Does product have a sale restriction",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "profile_image": {
+                        "title": "Profile Image",
+                        "description": "Profile Image",
+                        "type": "boolean",
+                        "example": "image"
+                    },
+                    "offer_unit_price": {
+                        "title": "Offer Unit Price",
+                        "description": "Offer Unit Price",
+                        "type": "number",
+                        "format": "float",
+                        "example": "1000"
+                    },
+                    "default_price_markup_pct": {
+                        "title": "Default Unit Price",
+                        "description": "Default Unit Price",
+                        "type": "number",
+                        "format": "float",
+                        "example": "1000"
+                    },
+                    "product_offering_id": {
+                        "title": "Product Offering Id",
+                        "description": "Product Offering Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "facility_id": {
+                        "title": "Facility Id",
+                        "description": "Facility Id",
+                        "type": "integer",
+                        "example": "1"
+                    }
+                },
+                "type": "object"
+            },
+            "FacilityProductOfferingUpdateFormRequest": {
+                "title": "Facility Product Offering Update Form Request Fields",
+                "description": "Facility Product Offering Update request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "product_name": {
+                        "title": "Product Name",
+                        "description": "Product Name",
+                        "type": "string",
+                        "example": "Product Name"
+                    },
+                    "brand_name": {
+                        "title": "Brand Name",
+                        "description": "Brand Name",
+                        "type": "string",
+                        "example": "Brand Name"
+                    },
+                    "manufacturer": {
+                        "title": "Manufacturer",
+                        "description": "Manufacturer",
+                        "type": "string",
+                        "example": "Manufacturer"
+                    },
+                    "upc_code": {
+                        "title": "UPC Code",
+                        "description": "UPC Code",
+                        "type": "string",
+                        "example": "UPC Code"
+                    },
+                    "qty_available": {
+                        "title": "Quantity of product available",
+                        "description": "Quantity of product available",
+                        "type": "integer",
+                        "example": "Quantity of product available"
+                    },
+                    "product_availability_date": {
+                        "title": "Product Availability date",
+                        "description": "Product Availability date",
+                        "type": "string",
+                        "example": "Product Availability date"
+                    },
+                    "description": {
+                        "title": "Description",
+                        "description": "Description",
+                        "type": "string",
+                        "example": "Description"
+                    },
+                    "unit_of_measure": {
+                        "title": "Unit of measure",
+                        "description": "Unit of measure",
+                        "type": "string",
+                        "example": "Unit of measure"
+                    },
+                    "is_drug": {
+                        "title": "Is the product a drug",
+                        "description": "Is the product a drug",
+                        "type": "string",
+                        "example": "true/false"
+                    },
+                    "has_sale_restrictions": {
+                        "title": "Does product have a sale restriction",
+                        "description": "Does product have a sale restriction",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "profile_image": {
+                        "title": "Profile Image",
+                        "description": "Profile Image",
+                        "type": "boolean",
+                        "example": "image"
+                    },
+                    "offer_unit_price": {
+                        "title": "Offer Unit Price",
+                        "description": "Offer Unit Price",
+                        "type": "number",
+                        "format": "float",
+                        "example": "1000"
+                    },
+                    "default_price_markup_pct": {
+                        "title": "Default Unit Price",
+                        "description": "Default Unit Price",
+                        "type": "number",
+                        "format": "float",
+                        "example": "1000"
+                    },
+                    "product_offering_id": {
+                        "title": "Product Offering Id",
+                        "description": "Product Offering Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "facility_id": {
+                        "title": "Facility Id",
+                        "description": "Facility Id",
+                        "type": "integer",
+                        "example": "1"
+                    }
+                },
+                "type": "object"
+            },
+            "FacilityProfessionalCreateFormRequest": {
+                "title": "Facility Professional Create Form Request Fields",
+                "description": "Facility Professional Create request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "professional_id": {
+                        "title": "Professional Id",
+                        "description": "Professional Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "facility_id": {
+                        "title": "Facility Id",
+                        "description": "Facility Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "is_accepted_facility": {
+                        "title": "is facility accepted by professional",
+                        "description": "is facility accepted by professional",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "is_accepted_professional": {
+                        "title": "is professional accepted to facility",
+                        "description": "is professional accepted to facility",
+                        "type": "integer",
+                        "example": "1"
+                    }
+                },
+                "type": "object"
+            },
+            "FacilityProfessionalUpdateFormRequest": {
+                "title": "Facility Professional Update Form Request Fields",
+                "description": "Facility Professional Update request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "professional_id": {
+                        "title": "Professional Id",
+                        "description": "Professional Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "facility_id": {
+                        "title": "Facility Id",
+                        "description": "Facility Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "is_accepted_facility": {
+                        "title": "is facility accepted by professional",
+                        "description": "is facility accepted by professional",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "is_accepted_professional": {
+                        "title": "is professional accepted to facility",
+                        "description": "is professional accepted to facility",
+                        "type": "integer",
+                        "example": "1"
+                    }
+                },
+                "type": "object"
+            },
+            "FacilityProfileUpdateFormRequest": {
+                "title": "Facility profile Update Form Request Fields",
+                "description": "Facility profile Update request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "short_name": {
+                        "title": "Facility Short Name",
+                        "description": "Short name of the facility",
+                        "type": "string",
+                        "example": "HDP"
+                    },
+                    "full_name": {
+                        "title": "Facility full Name",
+                        "description": "full name of the facility",
+                        "type": "string",
+                        "example": "HDP"
+                    },
+                    "profile_description": {
+                        "title": "Facility Professional Description",
+                        "description": "Professional Description of the facility",
+                        "type": "string",
+                        "example": "A Facility"
+                    },
+                    "public_code": {
+                        "title": "Facility Professional Public code",
+                        "description": "Professional Public code of the facility",
+                        "type": "string",
+                        "example": "A Facility"
+                    },
+                    "telephone": {
+                        "title": "Facility Professional Telephone",
+                        "description": "Professional Telephone of the facility",
+                        "type": "string",
+                        "example": "A Facility"
+                    },
+                    "year_established": {
+                        "title": "Facility Establishment",
+                        "description": "Establishment of the facility",
+                        "type": "integer",
+                        "example": "A Facility"
+                    },
+                    "primary_email": {
+                        "title": "Facility Primary Email",
+                        "description": "Primary Email of the facility",
+                        "type": "integer",
+                        "example": "hdp@email.com"
+                    },
+                    "primary_telephone": {
+                        "title": "Facility Primary Phone",
+                        "description": "Primary Phone of the facility",
+                        "type": "integer",
+                        "example": "hdp@email.com"
+                    },
+                    "website": {
+                        "title": "Facility Website",
+                        "description": "Website of the facility",
+                        "type": "string",
+                        "example": "Website of the facility"
+                    },
+                    "bank_name": {
+                        "title": "Facility Bank Name",
+                        "description": "Bank Name of the facility",
+                        "type": "string",
+                        "example": "First Bank"
+                    },
+                    "bank_account_name": {
+                        "title": "Facility Bank Account Name",
+                        "description": "Bank Account Name of the facility",
+                        "type": "string",
+                        "example": "Schneider Komolafe"
+                    },
+                    "bank_account_number": {
+                        "title": "Facility Bank Account Number",
+                        "description": "Bank Account Number of the facility",
+                        "type": "string",
+                        "example": "002342222211"
+                    },
+                    "paystack_bank_code": {
+                        "title": "Facility Paystack Bank code Number",
+                        "description": "Paystack Bank code Number of the facility",
+                        "type": "string",
+                        "example": "230333"
+                    },
+                    "paystack_bank_account_verification_details": {
+                        "title": "Facility Paystack Bank Verification Details",
+                        "description": "Paystack Bank Verification Details of the facility",
+                        "type": "string",
+                        "example": "Details"
+                    },
+                    "paystack_recipient_code": {
+                        "title": "Facility Paystack Reciepent Code",
+                        "description": "Paystack Reciepent Code of the facility",
+                        "type": "string",
+                        "example": "Details"
+                    },
+                    "paystack_recipient_details": {
+                        "title": "Facility Paystack Reciepent Details",
+                        "description": "Paystack Reciepent Details of the facility",
+                        "type": "string",
+                        "example": "Details"
+                    },
+                    "profile_image": {
+                        "title": "Facility Profile Image",
+                        "description": "Profile Image of the facility",
+                        "type": "string",
+                        "example": "Image"
+                    }
+                },
+                "type": "object"
+            },
+            "FacilityServiceAvailabilityCreateFormRequest": {
+                "title": "Facility Service Availability create Form Request Fields",
+                "description": "Facility Service Availability create request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "facility_id": {
+                        "title": "Facility Id",
+                        "description": "Facility Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "facility_location_id": {
+                        "title": "Facility Location Id",
+                        "description": "Facility Location Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "service_offering_id": {
+                        "title": "Service Offering Id",
+                        "description": "Service Offering Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "is_available_monday": {
+                        "title": "Is professional Available on Monday",
+                        "description": "Is professional Available on Monday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_tuesday": {
+                        "title": "Is professional Available on tuesday",
+                        "description": "Is professional Available on tuesday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_wednesday": {
+                        "title": "Is professional Available on wednesday",
+                        "description": "Is professional Available on wednesday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_thursday": {
+                        "title": "Is professional Available on thursday",
+                        "description": "Is professional Available on thursday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_friday": {
+                        "title": "Is professional Available on friday",
+                        "description": "Is professional Available on friday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_saturday": {
+                        "title": "Is professional Available on saturday",
+                        "description": "Is professional Available on saturday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_sunday": {
+                        "title": "Is professional Available on sunday",
+                        "description": "Is professional Available on sunday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "specific_time_open": {
+                        "title": "Is professional Open time",
+                        "description": "Is professional Open time",
+                        "type": "string",
+                        "example": "9:00"
+                    },
+                    "specific_time_close": {
+                        "title": "Is professional Close time",
+                        "description": "Is professional Close time",
+                        "type": "string",
+                        "example": "22:00"
+                    },
+                    "is_currently_unavailable": {
+                        "title": "Is professional Currently Available",
+                        "description": "Is professional Currently Available",
+                        "type": "boolean",
+                        "example": "true/false"
+                    }
+                },
+                "type": "object"
+            },
+            "FacilityServiceAvailabilityUpdateFormRequest": {
+                "title": "Facility Service Availability Update Form Request Fields",
+                "description": "Facility Service Availability Update request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "facility_id": {
+                        "title": "Facility Id",
+                        "description": "Facility Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "facility_location_id": {
+                        "title": "Facility Location Id",
+                        "description": "Facility Location Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "service_offering_id": {
+                        "title": "Service Offering Id",
+                        "description": "Service Offering Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "is_available_monday": {
+                        "title": "Is professional Available on Monday",
+                        "description": "Is professional Available on Monday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_tuesday": {
+                        "title": "Is professional Available on tuesday",
+                        "description": "Is professional Available on tuesday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_wednesday": {
+                        "title": "Is professional Available on wednesday",
+                        "description": "Is professional Available on wednesday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_thursday": {
+                        "title": "Is professional Available on thursday",
+                        "description": "Is professional Available on thursday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_friday": {
+                        "title": "Is professional Available on friday",
+                        "description": "Is professional Available on friday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_saturday": {
+                        "title": "Is professional Available on saturday",
+                        "description": "Is professional Available on saturday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_sunday": {
+                        "title": "Is professional Available on sunday",
+                        "description": "Is professional Available on sunday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "specific_time_open": {
+                        "title": "Is professional Open time",
+                        "description": "Is professional Open time",
+                        "type": "string",
+                        "example": "9:00"
+                    },
+                    "specific_time_close": {
+                        "title": "Is professional Close time",
+                        "description": "Is professional Close time",
+                        "type": "string",
+                        "example": "22:00"
+                    },
+                    "is_currently_unavailable": {
+                        "title": "Is professional Currently Available",
+                        "description": "Is professional Currently Available",
+                        "type": "boolean",
+                        "example": "true/false"
+                    }
+                },
+                "type": "object"
+            },
+            "FacilityServiceOfferingCreateFormRequest": {
+                "title": "Facility Service offering create Form Request Fields",
+                "description": "Facility Service offering create request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "facility_id": {
+                        "title": "Facility Id",
+                        "description": "Facility Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "service_offering_id": {
+                        "title": "Service Offering Id",
+                        "description": "Service Offering Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "offer_name": {
+                        "title": " Offer Name",
+                        "description": " Offer Name",
+                        "type": "string",
+                        "example": "name"
+                    },
+                    "description": {
+                        "title": "Description",
+                        "description": "Description",
+                        "type": "string",
+                        "example": "Description"
+                    },
+                    "delivery_mode": {
+                        "title": "Delivery mode",
+                        "description": "Delivery mode",
+                        "type": "string",
+                        "example": "Delivery mode"
+                    },
+                    "profile_image": {
+                        "title": "Profile  image",
+                        "description": "Profile  image",
+                        "type": "number",
+                        "format": "float",
+                        "example": "Profile  image"
+                    },
+                    "offer_unit_price": {
+                        "title": "Offer Unit Price",
+                        "description": "Offer Unit Price",
+                        "type": "number",
+                        "format": "float",
+                        "example": "Offer Unit Price"
+                    }
+                },
+                "type": "object"
+            },
+            "FacilityServiceOfferingUpdateFormRequest": {
+                "title": "Facility Service offering Update Form Request Fields",
+                "description": "Facility Service offering Update request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "facility_id": {
+                        "title": "Facility Id",
+                        "description": "Facility Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "service_offering_id": {
+                        "title": "Service Offering Id",
+                        "description": "Service Offering Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "offer_name": {
+                        "title": " Offer Name",
+                        "description": " Offer Name",
+                        "type": "string",
+                        "example": "name"
+                    },
+                    "description": {
+                        "title": "Description",
+                        "description": "Description",
+                        "type": "string",
+                        "example": "Description"
+                    },
+                    "delivery_mode": {
+                        "title": "Delivery mode",
+                        "description": "Delivery mode",
+                        "type": "string",
+                        "example": "Delivery mode"
+                    },
+                    "profile_image": {
+                        "title": "Profile  image",
+                        "description": "Profile  image",
+                        "type": "number",
+                        "format": "float",
+                        "example": "Profile  image"
+                    },
+                    "offer_unit_price": {
+                        "title": "Offer Unit Price",
+                        "description": "Offer Unit Price",
+                        "type": "number",
+                        "format": "float",
+                        "example": "Offer Unit Price"
+                    }
+                },
+                "type": "object"
+            },
+            "FacilityUserCreateFormRequest": {
+                "title": "Facility User Create Form Request Fields",
+                "description": "Facility User Create request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "facility_id": {
+                        "title": "Facility Id",
+                        "description": "Facility Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "offer_name": {
+                        "title": " Facility Public code",
+                        "description": " Facility Public code",
+                        "type": "string",
+                        "example": "name"
+                    }
+                },
+                "type": "object"
+            },
+            "FacilityUserUpdateFormRequest": {
+                "title": "Facility User Update Form Request Fields",
+                "description": "Facility User Update request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "facility_id": {
+                        "title": "Facility Id",
+                        "description": "Facility Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "offer_name": {
+                        "title": " Facility Public code",
+                        "description": " Facility Public code",
+                        "type": "string",
+                        "example": "name"
+                    }
+                },
+                "type": "object"
+            },
+            "ProfessionalServiceAvailabilityCreateFormRequest": {
+                "title": "Professional Service Availability Create Form Request Fields",
+                "description": "Professional Service Availability Create request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "professional_id": {
+                        "title": "Professional Id",
+                        "description": "Professional Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "service_offering_id": {
+                        "title": "Service Offering Id",
+                        "description": "Service Offering Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "is_available_monday": {
+                        "title": "Is professional Available on Monday",
+                        "description": "Is professional Available on Monday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_tuesday": {
+                        "title": "Is professional Available on tuesday",
+                        "description": "Is professional Available on tuesday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_wednesday": {
+                        "title": "Is professional Available on wednesday",
+                        "description": "Is professional Available on wednesday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_thursday": {
+                        "title": "Is professional Available on thursday",
+                        "description": "Is professional Available on thursday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_friday": {
+                        "title": "Is professional Available on friday",
+                        "description": "Is professional Available on friday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_saturday": {
+                        "title": "Is professional Available on saturday",
+                        "description": "Is professional Available on saturday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_sunday": {
+                        "title": "Is professional Available on sunday",
+                        "description": "Is professional Available on sunday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "specific_time_open": {
+                        "title": "Is professional Open time",
+                        "description": "Is professional Open time",
+                        "type": "string",
+                        "example": "9:00"
+                    },
+                    "specific_time_close": {
+                        "title": "Is professional Close time",
+                        "description": "Is professional Close time",
+                        "type": "string",
+                        "example": "22:00"
+                    },
+                    "is_currently_unavailable": {
+                        "title": "Is professional Currently Available",
+                        "description": "Is professional Currently Available",
+                        "type": "boolean",
+                        "example": "true/false"
+                    }
+                },
+                "type": "object"
+            },
+            "ProfessionalServiceAvailabilityUpdateFormRequest": {
+                "title": "Professional Service Availability Update Form Request Fields",
+                "description": "Professional Service Availability Update request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "professional_id": {
+                        "title": "Professional Id",
+                        "description": "Professional Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "service_offering_id": {
+                        "title": "Service Offering Id",
+                        "description": "Service Offering Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "is_available_monday": {
+                        "title": "Is professional Available on Monday",
+                        "description": "Is professional Available on Monday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_tuesday": {
+                        "title": "Is professional Available on tuesday",
+                        "description": "Is professional Available on tuesday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_wednesday": {
+                        "title": "Is professional Available on wednesday",
+                        "description": "Is professional Available on wednesday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_thursday": {
+                        "title": "Is professional Available on thursday",
+                        "description": "Is professional Available on thursday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_friday": {
+                        "title": "Is professional Available on friday",
+                        "description": "Is professional Available on friday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_saturday": {
+                        "title": "Is professional Available on saturday",
+                        "description": "Is professional Available on saturday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "is_available_sunday": {
+                        "title": "Is professional Available on sunday",
+                        "description": "Is professional Available on sunday",
+                        "type": "boolean",
+                        "example": "true/false"
+                    },
+                    "specific_time_open": {
+                        "title": "Is professional Open time",
+                        "description": "Is professional Open time",
+                        "type": "string",
+                        "example": "9:00"
+                    },
+                    "specific_time_close": {
+                        "title": "Is professional Close time",
+                        "description": "Is professional Close time",
+                        "type": "string",
+                        "example": "22:00"
+                    },
+                    "is_currently_unavailable": {
+                        "title": "Is professional Currently Available",
+                        "description": "Is professional Currently Available",
+                        "type": "boolean",
+                        "example": "true/false"
+                    }
+                },
+                "type": "object"
+            },
+            "ProfessionalServiceOfferingCreateFormRequest": {
+                "title": "Professional Service Offering Create Form Request Fields",
+                "description": "Professional Service Offering Create request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "professional_id": {
+                        "title": "Professional Id",
+                        "description": "Professional Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "service_offering_id": {
+                        "title": "Service Offering Id",
+                        "description": "Service Offering Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "offer_name": {
+                        "title": " Offer Name",
+                        "description": " Offer Name",
+                        "type": "string",
+                        "example": "name"
+                    },
+                    "description": {
+                        "title": "Description",
+                        "description": "Description",
+                        "type": "string",
+                        "example": "Description"
+                    },
+                    "delivery_mode": {
+                        "title": "Delivery mode",
+                        "description": "Delivery mode",
+                        "type": "string",
+                        "example": "Delivery mode"
+                    },
+                    "profile_image": {
+                        "title": "Profile  image",
+                        "description": "Profile  image",
+                        "type": "number",
+                        "format": "float",
+                        "example": "Profile  image"
+                    },
+                    "offer_unit_price": {
+                        "title": "Offer Unit Price",
+                        "description": "Offer Unit Price",
+                        "type": "number",
+                        "format": "float",
+                        "example": "Offer Unit Price"
+                    }
+                },
+                "type": "object"
+            },
+            "ProfessionalServiceOfferingUpdateFormRequest": {
+                "title": "Professional Service Offering Update Form Request Fields",
+                "description": "Professional Service Offering Update request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "professional_id": {
+                        "title": "Professional Id",
+                        "description": "Professional Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "service_offering_id": {
+                        "title": "Service Offering Id",
+                        "description": "Service Offering Id",
+                        "type": "integer",
+                        "example": "1"
+                    },
+                    "offer_name": {
+                        "title": " Offer Name",
+                        "description": " Offer Name",
+                        "type": "string",
+                        "example": "name"
+                    },
+                    "description": {
+                        "title": "Description",
+                        "description": "Description",
+                        "type": "string",
+                        "example": "Description"
+                    },
+                    "delivery_mode": {
+                        "title": "Delivery mode",
+                        "description": "Delivery mode",
+                        "type": "string",
+                        "example": "Delivery mode"
+                    },
+                    "profile_image": {
+                        "title": "Profile  image",
+                        "description": "Profile  image",
+                        "type": "number",
+                        "format": "float",
+                        "example": "Profile  image"
+                    },
+                    "offer_unit_price": {
+                        "title": "Offer Unit Price",
+                        "description": "Offer Unit Price",
+                        "type": "number",
+                        "format": "float",
+                        "example": "Offer Unit Price"
+                    }
+                },
+                "type": "object"
+            },
+            "ProfessionalUpdateFormRequest": {
+                "title": "Professional Update Form Request Fields",
+                "description": "Professional Update request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "public_code": {
+                        "title": "Public code",
+                        "description": "Public code",
+                        "type": "string",
+                        "example": "name"
+                    },
+                    "default_price_markup_pct": {
+                        "title": "default price",
+                        "description": "default price",
+                        "type": "number",
+                        "format": "float",
+                        "example": "default price"
+                    }
+                },
+                "type": "object"
+            },
+            "UserLoginFormRequest": {
+                "title": "Sign in Form Request Fields",
+                "description": "sign in request body data",
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "email": {
+                        "title": "User email",
+                        "description": "Email of the user",
+                        "type": "string",
+                        "example": "info@hdp.com"
+                    },
+                    "password": {
+                        "title": "User password",
+                        "description": "Password of the user",
+                        "type": "string",
+                        "example": "password"
+                    }
+                },
+                "type": "object"
+            },
+            "UserRegistrationFormRequest": {
+                "title": "Sign Up Form Request Fields",
+                "description": "sign up request body data",
+                "required": [
+                    "first_name"
+                ],
+                "properties": {
+                    "first_name": {
+                        "title": "User First Name",
+                        "description": "First name of the user",
+                        "type": "string",
+                        "example": "Schneider"
+                    },
+                    "last_name": {
+                        "title": "User Last Name",
+                        "description": "Last name of the user",
+                        "type": "string",
+                        "example": "Komolafe"
+                    },
+                    "userable_type": {
+                        "title": "User Type",
+                        "description": "Type of the user Customer,Facility,Professional",
+                        "type": "string",
+                        "example": "Customer/Facility/Professional"
+                    },
+                    "email": {
+                        "title": "User email",
+                        "description": "Email of the user",
+                        "type": "string",
+                        "example": "Email of the user"
+                    },
+                    "telephone": {
+                        "title": "User telephone",
+                        "description": "Telephone of the user",
+                        "type": "integer",
+                        "example": "234748993333"
+                    },
+                    "password": {
+                        "title": "User password",
+                        "description": "Password of the user",
+                        "type": "string",
+                        "example": "password"
+                    }
+                },
+                "type": "object"
+            },
+            "UserUpdateFormRequest": {
+                "title": "User Update Form Request Fields",
+                "description": "User Update request body data",
+                "required": [
+                    "first_name"
+                ],
+                "properties": {
+                    "first_name": {
+                        "title": "User First Name",
+                        "description": "First name of the user",
+                        "type": "string",
+                        "example": "Schneider"
+                    },
+                    "middle_name": {
+                        "title": "User Middle Name",
+                        "description": "Middle name of the user",
+                        "type": "string",
+                        "example": "Busayo"
+                    },
+                    "last_name": {
+                        "title": "User Last Name",
+                        "description": "Last name of the user",
+                        "type": "string",
+                        "example": "Komolafe"
+                    },
+                    "type": {
+                        "title": "User Type",
+                        "description": "Type of the user Customer,Facility,Professional",
+                        "type": "string",
+                        "example": "Customer/Facility/Professional"
+                    },
+                    "gender": {
+                        "title": "User Gender",
+                        "description": "Gender of the user Male,Female",
+                        "type": "string",
+                        "example": "Male/Female"
+                    },
+                    "email": {
+                        "title": "User email",
+                        "description": "Email of the user",
+                        "type": "string",
+                        "example": "Email of the user"
+                    },
+                    "telephone": {
+                        "title": "User telephone",
+                        "description": "Telephone of the user",
+                        "type": "integer",
+                        "example": "234748993333"
+                    },
+                    "location_address_house_number": {
+                        "title": "User Location Address",
+                        "description": "Location Address of the user",
+                        "type": "string",
+                        "example": "No 2 Jesus Street near schneider's office"
+                    },
+                    "location_address_street_name": {
+                        "title": "User Location Street Address",
+                        "description": "Location Street Address of the user",
+                        "type": "string",
+                        "example": "No 2 Jesus Street near schneider's office"
+                    },
+                    "location_address_suburb": {
+                        "title": "User Location Address Surburb",
+                        "description": "Location Address Surburb of the user",
+                        "type": "string",
+                        "example": "No 2 Jesus Street near schneider's office"
+                    },
+                    "location_address_city": {
+                        "title": "User Location City",
+                        "description": "Location City of the user",
+                        "type": "string",
+                        "example": "Abuja"
+                    },
+                    "location_address_state": {
+                        "title": "User Location State",
+                        "description": "Location State of the user",
+                        "type": "string",
+                        "example": "Abuja"
+                    },
+                    "gps_location_name": {
+                        "title": "User Location Name",
+                        "description": "Location Name of the user",
+                        "type": "string",
+                        "example": "Abuja"
+                    },
+                    "gps_long": {
+                        "title": "User GPS Long",
+                        "description": "GPS Long of the user",
+                        "type": "string",
+                        "example": "6.444"
+                    },
+                    "gps_lat": {
+                        "title": "User GPS Lat",
+                        "description": "GPS Lat of the user",
+                        "type": "string",
+                        "example": "9.0333"
+                    },
+                    "gps_city": {
+                        "title": "User GPS City",
+                        "description": "GPS City of the user",
+                        "type": "string",
+                        "example": "Abuja"
+                    },
+                    "gps_state": {
+                        "title": "User GPS State",
+                        "description": "GPS State of the user",
+                        "type": "string",
+                        "example": "FCT"
+                    },
+                    "bank_name": {
+                        "title": "User Bank Name",
+                        "description": "Bank Name of the user",
+                        "type": "string",
+                        "example": "First Bank"
+                    },
+                    "bank_account_name": {
+                        "title": "User Bank Account Name",
+                        "description": "Bank Account Name of the user",
+                        "type": "string",
+                        "example": "Schneider Komolafe"
+                    },
+                    "bank_account_number": {
+                        "title": "User Bank Account Number",
+                        "description": "Bank Account Number of the user",
+                        "type": "string",
+                        "example": "002342222211"
+                    },
+                    "paystack_bank_code": {
+                        "title": "User Paystack Bank code Number",
+                        "description": "Paystack Bank code Number of the user",
+                        "type": "string",
+                        "example": "230333"
+                    },
+                    "paystack_bank_account_verification_details": {
+                        "title": "User Paystack Bank Verification Details",
+                        "description": "Paystack Bank Verification Details of the user",
+                        "type": "string",
+                        "example": "Details"
+                    },
+                    "paystack_recipient_code": {
+                        "title": "User Paystack Reciepent Code",
+                        "description": "Paystack Reciepent Code of the user",
+                        "type": "string",
+                        "example": "Details"
+                    },
+                    "paystack_recipient_details": {
+                        "title": "User Paystack Reciepent Details",
+                        "description": "Paystack Reciepent Details of the user",
+                        "type": "string",
+                        "example": "Details"
+                    },
+                    "profile_image": {
+                        "title": "User Profile Image",
+                        "description": "Profile Image of the user",
+                        "type": "string",
+                        "example": "Image"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "HDP Application",
+            "description": "API Endpoints of Projects"
+        }
+    ],
+    "security": [
+        []
+    ]
+}
