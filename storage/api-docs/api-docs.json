@@ -722,7 +722,7 @@
                 ]
             }
         },
-        "/api/v1/facility/facility-location": {
+        "/api/v1/facility/professional-facility-location": {
             "post": {
                 "tags": [
                     "facility"
@@ -764,7 +764,7 @@
                 ]
             }
         },
-        "/api/v1/facility/facility-location/{id}": {
+        "/api/v1/facility/professional-facility-location/{id}": {
             "get": {
                 "tags": [
                     "facility"

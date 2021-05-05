@@ -52,10 +52,10 @@ class UserController extends Controller
         $this->requestAndDbIntersection($request, $model, []);
 
         $model->save();
-        
+
         $token = JWTAuth::attempt($request->only('email', 'password'));
 
-        return $this->authSuccessResponse($request->user(), $token);
+        return $this->authSuccessResponse($model, $token);
     }
 
     /**
@@ -231,7 +231,7 @@ class UserController extends Controller
         if(!$user){
             return $this->errorResponse($user, 401);
         }
-        
+
         return $this->showMessage($user, 201);
     }
 
@@ -242,7 +242,7 @@ class UserController extends Controller
         if(!$user){
             return $this->errorResponse($user, 401);
         }
-        
+
         return $this->showMessage($user, 201);
     }
 
@@ -253,7 +253,7 @@ class UserController extends Controller
         if(!$user){
             return $this->errorResponse($user, 401);
         }
-        
+
         return $this->showMessage($user, 201);
     }
 

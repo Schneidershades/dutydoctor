@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Model;
 
-trait ApiResponser
+trait ApiResponder
 {
     private function successResponse($data, $code)
     {

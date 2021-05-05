@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api\Customer;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 use App\Models\User;
 use App\Models\Customer;
 use App\Http\Requests\Customer\CustomerUpdateFormRequest;
@@ -51,7 +50,7 @@ class CustomerController extends Controller
         $model = Customer::find(auth()->user()->id);
 
         $model = $this->requestAndDbIntersection($request, $model, []);
-        
+
         $model->save();
 
         return $this->showMessage('customer updated');

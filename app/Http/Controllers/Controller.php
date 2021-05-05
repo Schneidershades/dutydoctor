@@ -7,10 +7,11 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use App\Traits\Api\ApiResponder;
+use Illuminate\Support\Facades\Schema;
 
 class Controller extends BaseController
 {
-    use ApiResponser, AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    use ApiResponder, AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function requestAndDbIntersection($request, $model, array $excludeFieldsForLogic = []){
 		$requestColumns = array_keys($request->all());

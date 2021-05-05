@@ -11,7 +11,7 @@ class FacilityLocationController extends Controller
 {
      /**
     * @OA\Post(
-    *      path="/api/v1/facility/facility-location",
+    *      path="/api/v1/facility/professional-facility-location",
     *      operationId="createFacilityLocation",
     *      tags={"facility"},
     *      summary="create a facility's location ",
@@ -56,7 +56,7 @@ class FacilityLocationController extends Controller
 
      /**
     * @OA\Get(
-    *      path="/api/v1/facility/facility-location/{id}",
+    *      path="/api/v1/facility/professional-facility-location/{id}",
     *      operationId="showFacilityLocation",
     *      tags={"facility"},
     *      summary="show a facility's location ",
@@ -102,7 +102,7 @@ class FacilityLocationController extends Controller
 
      /**
     * @OA\Put(
-    *      path="/api/v1/facility/facility-location/{id}",
+    *      path="/api/v1/facility/professional-facility-location/{id}",
     *      operationId="updateFacilityLocation",
     *      tags={"facility"},
     *      summary="update a facility's location ",
